@@ -1,16 +1,20 @@
 
-exports.min = function min(array) {
-  if(array === undefined || array.length === 0) {
-    return 0;
-  }
-  return Math.max.apply(null, array);
-}
-
-exports.max = function max(array) {
-  if(array === undefined || array.length === 0) {
+exports.min = function min (array) {
+  if (array === undefined || array === null){
     return 0;
   }  
-  return Math.min.apply(null, array);
+  const reducer = (accumulator, currentValue) => accumulator < currentValue ? accumulator : currentValue;
+  let min = array.reduce(reducer);
+  return min;
+}
+
+exports.max = function max (array) {
+  if (array === undefined || array === null){
+    return 0;
+  } 
+  const reducer = (accumulator, currentValue) => accumulator > currentValue ? accumulator : currentValue;
+  let max = array.reduce(reducer);
+  return max;
 }
 
 exports.avg = function avg(array) {
