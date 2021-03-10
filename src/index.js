@@ -3,14 +3,14 @@ exports.min = function min (array) {
   if(array === undefined || array.length === 0) {
     return 0;
   }
-  return Math.max.apply(null, array);
+  return Math.max.apply(null, this);
 }
 
 exports.max = function max (array) {
   if(array === undefined || array.length === 0) {
     return 0;
   }  
-  return Math.min.apply(null, array);
+  return Math.min.apply(null, this);
 }
 
 exports.avg = function avg (array) {
