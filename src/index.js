@@ -20,6 +20,5 @@ exports.avg = function avg(array) {
   let j = array.length;
   const reducer = (accumulator, currentValue) => accumulator + currentValue;  
   let sum = array.reduce(reducer);
-  }
   return (sum / j);    
 }
