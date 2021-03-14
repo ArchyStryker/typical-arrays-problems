@@ -1,6 +1,6 @@
 
 exports.min = function min (array) {
-  if (array === undefined || array === null){
+  if (array === undefined || array.length === 0){
     return 0;
   }  
   const reducer = (accumulator, currentValue) => accumulator < currentValue ? accumulator : currentValue;
@@ -9,7 +9,7 @@ exports.min = function min (array) {
 }
 
 exports.max = function max (array) {
-  if (array === undefined || array === null){
+  if (array === undefined || array.length === 0){
     return 0;
   } 
   const reducer = (accumulator, currentValue) => accumulator > currentValue ? accumulator : currentValue;
